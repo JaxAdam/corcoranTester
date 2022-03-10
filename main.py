@@ -15,7 +15,7 @@ for req in range(allN):
             else:
                 errors[response.status_code] = 1
             totalErrorsCount += 1
-    except requests.exceptions.ReadTimeout:
+    except:
         if 'timeout' in errors.keys():
             errors['timeout'] += 1
         else:
